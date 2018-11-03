@@ -5,9 +5,9 @@
     <classes>
       <class name="tests.SdosTest01">
         <methods>
-          <include name="SuscripcionClick"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="EmpleoClick"/>
         </methods>
       </class> <!-- tests.SdosTest01 -->
     </classes>

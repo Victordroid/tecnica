@@ -1,11 +1,11 @@
 package pages;
 
+import java.io.File;
+import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Navegacion {
 	WebDriver driver;
@@ -24,9 +24,9 @@ public class Navegacion {
 	By email = By.name("your-email");
 	By botonExaminar = By.name("file-190");
 	By cookies = By.className("cdp-cookies-boton-cerrar");
-	By botonOk = By.className("wpcf7-form-control wpcf7-submit");
-	//By botonOk = By.className("ajax-loader");
-
+	By botonOk = By.cssSelector("input.wpcf7-form-control.wpcf7-submit");
+	By botonEnviar = By.cssSelector("input.wpcf7-form-control.wpcf7-submit");
+	By mensaje = By.name("your-message");
 	
 	public Navegacion (WebDriver driver) {
 		this.driver = driver;
@@ -67,7 +67,11 @@ public class Navegacion {
 	//Contacto
 	public void ContactoClick(){
 		driver.findElement(contacto).click();
-	}
+		driver.findElement(nombre).sendKeys("nombre");
+		driver.findElement(email).sendKeys("correo@correo.com");
+		driver.findElement(mensaje).sendKeys("Mensaje de prueba");
+		//driver.findElement(botonEnviar).click();
+		}
 	
 	//Proyectos
 	public void ProyectosClick(){
@@ -87,7 +91,7 @@ public class Navegacion {
 	//Busqueda
 	public void BarraBusquedaClick(){
 		
-		System.out.println("Espera de la barra de busqueda");
+		//System.out.println("Espera de la barra de busqueda");
 		driver.findElement(barraBusqueda).click();
 		driver.findElement(barraBusqueda).sendKeys("sdos");
 		driver.findElement(barraBusqueda).sendKeys(Keys.ENTER);
@@ -105,18 +109,23 @@ public class Navegacion {
 		
 		driver.findElement(email).click();
 		driver.findElement(email).sendKeys("correo@correo.com");
+
+		URL fileLocation = getClass().getClassLoader().getResource("CV.txt");
+		File CV = new File(fileLocation.getFile());
 		
-		//driver.findElement(botonExaminar).sendKeys("C:/CV.txt");
+		driver.findElement(botonExaminar).sendKeys(CV.getAbsolutePath());
+		
+		//driver.findElement(botonEnviar).click();
 	}
 	
 	//Suscripcion
 	public void SuscripcionClick(){
 		driver.findElement(email).click();
-		System.out.println("Campo Localizado");
-		driver.findElement(email).sendKeys("asdf");
-		System.out.println("rellenar email");
+		//System.out.println("Campo Localizado");
+		driver.findElement(email).sendKeys("correo@correo.com");
+		//System.out.println("rellenar email");
 		driver.findElement(botonOk).click();
-		System.out.println("pulsar ok");
+		//System.out.println("pulsar ok");
 	}
 	
 
