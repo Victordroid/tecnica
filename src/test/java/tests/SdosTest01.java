@@ -2,11 +2,16 @@ package tests;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
 
 import pages.HomePage;
 import pages.Navegacion;
@@ -21,8 +26,9 @@ public class SdosTest01 {
 	public void setup(){
 		System.setProperty("webdriver.gecko.driver","C:/geckodriver/geckodriver.exe");
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://sdos.es");
+
 	}
 	
 	@Test(priority=0)
@@ -61,12 +67,14 @@ public class SdosTest01 {
 		System.out.println("Blog pulsado");		
 	}
 	
-	@Test(priority=4)
+	@Test(priority=3)
 	public void HacerBusqueda(){
 		objNavegacion = new Navegacion(driver);
 		
 		System.out.println("pulsar boton de lupa");
 		objNavegacion.BotonBusquedaClick();
+		System.out.println("Espera de 10 segundos");
+		objNavegacion.esperarSegundos(driver, 2);
 		System.out.println("pulsar en la barra de busqueda");
 		objNavegacion.BarraBusquedaClick();
 		System.out.println("busqueda hecha");		
@@ -79,14 +87,25 @@ public class SdosTest01 {
 		objNavegacion.EmpleoClick();
 
 	}
-	@Test(priority=3)
+	@Test(priority=4)
 	public void SuscripcionClick(){
 		objNavegacion = new Navegacion(driver);
+		
+		objNavegacion.ServiciosClick();
+		System.out.println("Espera de 10 segundos");
+		objNavegacion.esperarSegundos(driver, 5);
 		System.out.println("Suscripcion");
 		objNavegacion.SuscripcionClick();
 
 	}	
-		
+	
+	@AfterTest 
+	public void tearDown(){
+		driver.quit();
+	}
+	
+	
+	
 	
 
 }

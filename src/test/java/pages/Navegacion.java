@@ -3,9 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Navegacion {
 	WebDriver driver;
+
 	By servicio = By.id("menu-item-2586");
 	By productos = By.id("menu-item-2666");
 	By equipo = By.id("menu-item-2839");
@@ -20,12 +24,25 @@ public class Navegacion {
 	By email = By.name("your-email");
 	By botonExaminar = By.name("file-190");
 	By cookies = By.className("cdp-cookies-boton-cerrar");
-	//By botonOk = By.className("wpcf7-form-control wpcf7-submit");
-	By botonOk = By.className("ajax-loader");
+	By botonOk = By.className("wpcf7-form-control wpcf7-submit");
+	//By botonOk = By.className("ajax-loader");
+
 	
 	public Navegacion (WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	public void esperarSegundos(WebDriver driver, int segundos){
+	       
+	      synchronized(driver){
+	         try {
+	            driver.wait(segundos * 1000);
+	         } catch (InterruptedException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	         }
+	      }
+	   }
 	
 	//pulsar cookies
 	public void PulsarCookiesClick(){
@@ -69,6 +86,8 @@ public class Navegacion {
 	
 	//Busqueda
 	public void BarraBusquedaClick(){
+		
+		System.out.println("Espera de la barra de busqueda");
 		driver.findElement(barraBusqueda).click();
 		driver.findElement(barraBusqueda).sendKeys("sdos");
 		driver.findElement(barraBusqueda).sendKeys(Keys.ENTER);
