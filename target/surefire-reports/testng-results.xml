@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="214921" started-at="2018-11-04T16:43:45Z" finished-at="2018-11-04T16:47:20Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="214921" started-at="2018-11-04T16:43:45Z" finished-at="2018-11-04T16:47:20Z">
+      <class name="tests.SdosTest01">
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SdosTest01@511baa65]" name="setup" is-config="true" duration-ms="21935" started-at="2018-11-04T17:43:45Z" finished-at="2018-11-04T17:44:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SdosTest02@36d64342]" name="setup" is-config="true" duration-ms="23637" started-at="2018-11-04T17:44:07Z" finished-at="2018-11-04T17:44:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SdosTest03@39ba5a14]" name="setup" is-config="true" duration-ms="26715" started-at="2018-11-04T17:44:30Z" finished-at="2018-11-04T17:44:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SdosTest04@3f3afe78]" name="setup" is-config="true" duration-ms="35912" started-at="2018-11-04T17:44:57Z" finished-at="2018-11-04T17:45:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:tests.SdosTest05@7f63425a]" name="setup" is-config="true" duration-ms="35753" started-at="2018-11-04T17:45:33Z" finished-at="2018-11-04T17:46:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="AbrirPaginaSdos()[pri:0, instance:tests.SdosTest01@511baa65]" name="AbrirPaginaSdos" duration-ms="263" started-at="2018-11-04T17:46:48Z" finished-at="2018-11-04T17:46:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AbrirPaginaSdos -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SdosTest01@511baa65]" name="tearDown" is-config="true" duration-ms="5217" started-at="2018-11-04T17:46:49Z" finished-at="2018-11-04T17:46:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SdosTest02@36d64342]" name="tearDown" is-config="true" duration-ms="6867" started-at="2018-11-04T17:46:54Z" finished-at="2018-11-04T17:47:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SdosTest03@39ba5a14]" name="tearDown" is-config="true" duration-ms="8056" started-at="2018-11-04T17:47:01Z" finished-at="2018-11-04T17:47:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SdosTest04@3f3afe78]" name="tearDown" is-config="true" duration-ms="6975" started-at="2018-11-04T17:47:09Z" finished-at="2018-11-04T17:47:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SdosTest05@7f63425a]" name="tearDown" is-config="true" duration-ms="3921" started-at="2018-11-04T17:47:16Z" finished-at="2018-11-04T17:47:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SdosTest01 -->
+      <class name="tests.SdosTest03">
+        <test-method status="PASS" signature="EmpleoClick()[pri:0, instance:tests.SdosTest03@39ba5a14]" name="EmpleoClick" duration-ms="7474" started-at="2018-11-04T17:46:41Z" finished-at="2018-11-04T17:46:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmpleoClick -->
+      </class> <!-- tests.SdosTest03 -->
+      <class name="tests.SdosTest02">
+        <test-method status="PASS" signature="NavegarApartados()[pri:0, instance:tests.SdosTest02@36d64342]" name="NavegarApartados" duration-ms="20065" started-at="2018-11-04T17:46:21Z" finished-at="2018-11-04T17:46:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavegarApartados -->
+      </class> <!-- tests.SdosTest02 -->
+      <class name="tests.SdosTest05">
+        <test-method status="PASS" signature="SuscripcionClick()[pri:0, instance:tests.SdosTest05@7f63425a]" name="SuscripcionClick" duration-ms="8964" started-at="2018-11-04T17:46:12Z" finished-at="2018-11-04T17:46:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuscripcionClick -->
+      </class> <!-- tests.SdosTest05 -->
+      <class name="tests.SdosTest04">
+        <test-method status="PASS" signature="HacerBusqueda()[pri:0, instance:tests.SdosTest04@3f3afe78]" name="HacerBusqueda" duration-ms="3088" started-at="2018-11-04T17:46:09Z" finished-at="2018-11-04T17:46:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HacerBusqueda -->
+      </class> <!-- tests.SdosTest04 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

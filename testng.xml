@@ -3,8 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="tests.SdosTest01"/>
+      <class name="tests.SdosTest04"/>
+      <class name="tests.SdosTest05"/>
       <class name="tests.SdosTest02"/>
+      <class name="tests.SdosTest03"/>
+      <class name="tests.SdosTest01"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

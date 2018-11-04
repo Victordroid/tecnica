@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="tests.SdosTest01">
+      <class name="tests.SdosTest05">
         <methods>
+          <include name="tearDown"/>
+          <include name="SuscripcionClick"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.SdosTest05 -->
+      <class name="tests.SdosTest03">
+        <methods>
+          <include name="EmpleoClick"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="EmpleoClick"/>
         </methods>
-      </class> <!-- tests.SdosTest01 -->
+      </class> <!-- tests.SdosTest03 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

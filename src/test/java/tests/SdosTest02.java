@@ -20,12 +20,11 @@ public class SdosTest02 {
 	public void setup(){
 		System.setProperty("webdriver.gecko.driver","C:/geckodriver/geckodriver.exe");
 		driver = new FirefoxDriver();
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://sdos.es");
 
 	}
-	@Test(priority=0)
-	public void AbrirPaginaSdos(){
+	@Test
+	public void NavegarApartados(){
 		objNavegacion = new Navegacion(driver);
 		
 		//String titulo = objNavegacion.getSdosTitle();
@@ -34,11 +33,35 @@ public class SdosTest02 {
 		//System.out.println("Título: "+titulo+" Carga de la página completada");	
 		objNavegacion.PulsarCookiesClick();
 		//System.out.println("Cookies pulsada");	
+		
+		
+		objNavegacion = new Navegacion(driver);
+		//System.out.println("Buscar Servicios");
+
+		objNavegacion.ServiciosClick();
+		//System.out.println("Servicios pulsado");
+			
+		objNavegacion.ProductosClick();
+		//System.out.println("Productos pulsado");
+			
+		objNavegacion.ProyectosClick();
+		//System.out.println("Proyectos pulsado");
+			
+		objNavegacion.EquipoClick();
+		//System.out.println("Equipo pulsado");
+			
+		objNavegacion.ContactoClick();
+		//System.out.println("Contacto pulsado");
+		
+		objNavegacion.esperarSegundos(driver, 1);
+			
+		objNavegacion.BlogClick();
+		//System.out.println("Blog pulsado");
 	}
 	
 	@AfterTest 
 	public void tearDown(){
-		//driver.quit();
+		driver.quit();
 	}
 
 }
